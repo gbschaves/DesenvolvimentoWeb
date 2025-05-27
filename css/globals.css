@@ -1,21 +1,19 @@
 * {
   font-family: "Courier New", Courier, monospace;
   color: #fff;
+  margin: 0px;
+  padding: 0px;
 }
 
 .corpo {
-  background: #000;
-  display: flex;
-  margin: auto;
-  padding:10rem;
+  background: #050505;
+  height: 100vh;
 }
-
 
 #botao {
   position: fixed;
       bottom: 20px;  /* distância do botão em relação ao rodapé */
       right: 20px;   /* distância do botão em relação à borda direita */
-      padding: 10px 20px;
       background-color: black;
       color: greenyellow;
       border: 1px solid rgb(0, 255, 213);
@@ -26,7 +24,14 @@
       z-index: 1000; /
 }
 
-/* Seu CSS do botão */
+
+footer {
+  position: absolute;
+  bottom: 0%;
+width: 100%;;
+}
+
+
 button,
 button::after {
   padding: 10px 50px;
@@ -36,7 +41,7 @@ button::after {
   color: white;
   background-color: transparent;
   position: relative;
-  cursor: pointer; /* Adicionado para indicar que é clicável */
+  cursor: pointer;
 }
 
 button::after {
@@ -47,7 +52,7 @@ button::after {
   --move5: inset(45% 0 6% 0);
   --move6: inset(14% 0 61% 0);
   clip-path: var(--move1);
-  content: "Começar"; /* O texto que aparece com o glitch */
+  content: "Começar";
   position: absolute;
   top: 0;
   left: 0;
