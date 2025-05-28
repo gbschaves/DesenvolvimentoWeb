@@ -10,6 +10,12 @@
   height: 100vh;
 }
 
+.cabecalho {
+
+  top: 4rem;
+  left:20rem
+}
+
 #botao {
   position: fixed;
       bottom: 20px;  /* distância do botão em relação ao rodapé */
@@ -29,6 +35,17 @@ footer {
   position: absolute;
   bottom: 0%;
 width: 100%;;
+}
+
+.logo {
+  top: 5rem;
+  left: 60rem;
+}
+
+.logo2 {
+  width: 50%;
+  top: 32rem;
+  left: 20rem;
 }
 
 
