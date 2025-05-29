@@ -18,32 +18,32 @@
 .conteudo {
   line-height: 30px;
   padding-top: 21rem;
-  right: 22rem;
+  right: 23rem;
 }
 
 .entenda {
   position: absolute;
   margin-top: 4rem;
-  left: 50rem;
+  left: 53rem;
 }
 
 .como {
   position: absolute;
-  margin-top: 6rem;
-  left: 56rem;
+  margin-top: 4rem;
+  left: 61rem;
 }
 
 .funciona {
   position: absolute;
-  margin-top: 8rem;
-  left: 60rem;
+  margin-top: 6rem;
+  left: 53rem;
 }
 
 
 #botao {
   position: fixed;
-      bottom: 20px;  /* distância do botão em relação ao rodapé */
-      right: 20px;   /* distância do botão em relação à borda direita */
+      bottom: 20px;
+      right: 20px; 
       background-color: black;
       color: greenyellow;
       border: 1px solid rgb(0, 255, 213);
@@ -65,16 +65,16 @@ footer {
 
 .logo {
   top: 8rem;
-  right: 15rem;
+  right: 14rem;
 }
 
 .lista {
   position: absolute;
-  top: 31rem;
-  left: 57rem;
+  top: 29rem;
+  left: 55rem;
   width: 20rem;
   height: 20rem;
-  background-color: #050505;
+  background-color: transparent;
   border-radius: 10px;
   padding: 1rem;
 }
@@ -106,7 +106,7 @@ button::after {
   --move5: inset(45% 0 6% 0);
   --move6: inset(14% 0 61% 0);
   clip-path: var(--move1);
-  content: "Começar";
+  content: "x$%#!@";
   position: absolute;
   top: 0;
   left: 0;
