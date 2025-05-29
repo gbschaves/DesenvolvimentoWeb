@@ -10,11 +10,35 @@
   height: 100vh;
 }
 
-.cabecalho {
-
-  top: 4rem;
-  left:20rem
+.introducao {
+  line-height: 20px;
+  padding-top: 8rem;
 }
+
+.conteudo {
+  line-height: 30px;
+  padding-top: 21rem;
+  right: 22rem;
+}
+
+.entenda {
+  position: absolute;
+  margin-top: 4rem;
+  left: 50rem;
+}
+
+.como {
+  position: absolute;
+  margin-top: 6rem;
+  left: 56rem;
+}
+
+.funciona {
+  position: absolute;
+  margin-top: 8rem;
+  left: 60rem;
+}
+
 
 #botao {
   position: fixed;
@@ -31,21 +55,34 @@
 }
 
 
+
+
 footer {
   position: absolute;
   bottom: 0%;
-width: 100%;;
+  width: 100%;;
 }
 
 .logo {
-  top: 5rem;
-  left: 60rem;
+  top: 8rem;
+  right: 15rem;
+}
+
+.lista {
+  position: absolute;
+  top: 31rem;
+  left: 57rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: #050505;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 .logo2 {
-  width: 50%;
-  top: 32rem;
-  left: 20rem;
+  width: 25% ;
+  top: 28rem;
+  left: 28rem;
 }
 
 
