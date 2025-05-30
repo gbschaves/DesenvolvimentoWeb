@@ -5,188 +5,70 @@
   padding: 0px;
 }
 
-.corpo {
-  background: #050505;
+body {
+  margin: 0;
   height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.introducao {
-  line-height: 20px;
-  padding-top: 8rem;
+.gradient-overlay {
+  /* Este é o elemento que conterá o gradiente e será animado */
+  width: 100%;
+  height: 100%;
+  position: fixed; /* Posiciona sobre o fundo preto */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Garante que fique atrás de outros conteúdos */
+
+  /* O gradiente roxo, com sua opacidade inicial controlada */
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(71, 29, 138, 0.2) 35%,
+    rgba(71, 29, 138, 0.7) 100%
+  );
+
+  /* Aplica a animação de opacidade */
+  animation: breathGradient 5s infinite alternate ease-in-out;
 }
 
-.conteudo {
-  line-height: 30px;
-  padding-top: 21rem;
-  right: 22rem;
-}
-
-.entenda {
+.paraonboard {
   position: absolute;
-  margin-top: 4rem;
-  left: 50rem;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%) scale(1); /* Adiciona um scale inicial de 1 */
+  text-align: center;
+  opacity: 0.1; /* Opacidade inicial do texto */
+
+  /* Adiciona a transição para suavizar a animação */
+  transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
 }
 
-.como {
-  position: absolute;
-  margin-top: 6rem;
-  left: 56rem;
+.paraonboard:hover {
+  transform: translate(-50%, -50%) scale(2.1); /* Aumenta o tamanho em 10% ao passar o mouse */
+  opacity: 1; /* Torna o texto totalmente visível ao passar o mouse */
 }
-
-.funciona {
-  position: absolute;
-  margin-top: 8rem;
-  left: 60rem;
-}
-
-
-#botao {
-  position: fixed;
-      bottom: 20px;  /* distância do botão em relação ao rodapé */
-      right: 20px;   /* distância do botão em relação à borda direita */
-      background-color: black;
-      color: greenyellow;
-      border: 1px solid rgb(0, 255, 213);
-      border-radius: 5px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      font-size: 16px;
-      z-index: 1000; /
-}
-
-
-
 
 footer {
   position: absolute;
   bottom: 0%;
-  width: 100%;;
+  width: 100%;
 }
 
-.logo {
-  top: 8rem;
-  right: 15rem;
-}
-
-.lista {
-  position: absolute;
-  top: 31rem;
-  left: 57rem;
-  width: 20rem;
-  height: 20rem;
-  background-color: #050505;
-  border-radius: 10px;
-  padding: 1rem;
-}
-
-.logo2 {
-  width: 25% ;
-  top: 28rem;
-  left: 28rem;
-}
-
-
-button,
-button::after {
-  padding: 10px 50px;
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  background-color: transparent;
-  position: relative;
-  cursor: pointer;
-}
-
-button::after {
-  --move1: inset(50% 50% 50% 50%);
-  --move2: inset(31% 0 40% 0);
-  --move3: inset(39% 0 15% 0);
-  --move4: inset(45% 0 40% 0);
-  --move5: inset(45% 0 6% 0);
-  --move6: inset(14% 0 61% 0);
-  clip-path: var(--move1);
-  content: "Começar";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: block;
-}
-
-button:hover::after {
-  animation: glitch_4011 1s;
-  text-shadow: 10 10px 10px black;
-  animation-timing-function: steps(2, end);
-  text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #e94be8;
-  background-color: transparent;
-  border: 3px solid rgb(0, 255, 213);
-}
-
-button:hover {
-  text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #e94be8;
-}
-
-button:hover {
-  background-color: transparent;
-  border: 1px solid rgb(0, 255, 213);
-  box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
-}
-
-@keyframes glitch_4011 {
+@keyframes breathGradient {
   0% {
-      clip-path: var(--move1);
-      transform: translate(0px, -10px);
+    /* O roxo quase não aparece (muito transparente) */
+    opacity: 0.1; /* Ajuste este valor para controlar a intensidade mínima do roxo */
   }
-
-  10% {
-      clip-path: var(--move2);
-      transform: translate(-10px, 10px);
-  }
-
-  20% {
-      clip-path: var(--move3);
-      transform: translate(10px, 0px);
-  }
-
-  30% {
-      clip-path: var(--move4);
-      transform: translate(-10px, 10px);
-  }
-
-  40% {
-      clip-path: var(--move5);
-      transform: translate(10px, -10px);
-  }
-
   50% {
-      clip-path: var(--move6);
-      transform: translate(-10px, 10px);
+    /* O roxo aparece no seu pico (mais visível) */
+    opacity: 1; /* Ajuste este valor para controlar a intensidade máxima do roxo */
   }
-
-  60% {
-      clip-path: var(--move1);
-      transform: translate(10px, -10px);
-  }
-
-  70% {
-      clip-path: var(--move3);
-      transform: translate(-10px, 10px);
-  }
-
-  80% {
-      clip-path: var(--move2);
-      transform: translate(10px, -10px);
-  }
-
-  90% {
-      clip-path: var(--move4);
-      transform: translate(-10px, 10px);
-  }
-
   100% {
-      clip-path: var(--move1);
-      transform: translate(0);
+    /* O roxo volta a quase não aparecer */
+    opacity: 0.1;
   }
 }
