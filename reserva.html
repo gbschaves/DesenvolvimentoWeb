@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <title>Reservas</title>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Pousada Serra Verde</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="pousada.html">A Pousada</a>
+                <a href="reserva.html">Reservas</a>
+                <a href="tarifa.html">Tarifas</a>
+                <a href="como_chegar.html">Como Chegar</a>   
+            </nav>
+        </header>
+    </section>
+    <!-- EXEMPLO DE ESPECIALIZAÇÃO -->
+    <main class="container_reserva">
+        <article>
+            <h2>Reservas</h2>
+            <p>Você pode efetuar sua reserva pelo telefone (12) 4321-1234, ou pelo nosso site,
+                seguindo os passos abaixo:</p>
+            <ol>
+                <li>Preencha o formulário a seguir.</li>
+                <li>Aguarde nosso contato telefônico, ou por e-mail, para confirmação da reserva.</li>
+                <li>Efetue a transferência do valor da reserva.</li>
+                <li>Envie o comprovante de transferência para o e-mail
+                    <a href="mailto:atendimento@pousadaserraverde.tur.br">
+                        atendimento@pousadaserraverde.tur.br.</a></li>                
+            </ol>
+        </article>
+
+        <h3>Faça sua reserva agora na Pousada Serra Verde:</h3>
+
+        <form action="" method="get">
+            <fieldset>
+                <legend>Solicitação de Reserva</legend>
+                    <div>
+                        <p>
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </p>
+                        
+                    </div>
+                    <div>
+                        <form oninput="idade.value = (idade.value) + ' ano(s)'">
+                            <label for="idade">Idade</label>
+                            <input type="range" id="idade" name="idade" min="18" max="150" value="18" required>
+                            <output id="idade" name="idade">18 ano(s)</output>
+                        </form>
+                        
+                    </div>
+                    <div>
+                        <p>
+                            <label for="celular">Celular</label>
+                            <input type="phone" id="celular" name="celular" required placeholder="99 99999-9999" 
+                                pattern="[0-9]{2} [0-9]{5}-[0-9]{4}">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </p>
+                        
+                    </div>
+        
+                    <div>
+                        <p>
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" required>
+                            <label for="uf">UF</label>
+                            <select name="uf" id="uf">
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                                <option value="AC">AC</option>
+                            </select>
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <fieldset>
+                            <legend>Chalé</legend>
+                            <input type="radio" id="economico" name="chale" value="economico" required>
+                            <label for="">Econômico</label>
+        
+                            <input type="radio" id="standard" name="chale" value="standard" checked>
+                            <label for="">Standard</label>
+        
+        
+                            <input type="radio" id="luxo" name="chale" value="luxo">
+                            <label for="">Luxo</label>
+        
+                            <input type="radio" id="familia" name="chale" value="familia">
+                            <label for="">Família</label>
+                        </fieldset>
+                    </div>
+                    
+                    <div>
+                        <p>
+                            <label for="dt_chegada">Chegada</label>
+                            <input type="date" id="dt_chegada" name="dt_chegada" required>
+                        </p>
+                        
+                    </div>
+                    <div>
+                        <p>
+                            <label for="dt_partida">Partida</label>
+                            <input type="date" id="dt_partida" name="dt_partida" required>
+                        </p>
+                    </div>
+        
+                    <div>
+                        <p>
+                            <label for="adulto">Adultos</label>
+                            <input type="number" id="adulto" name="adulto" min="1" max="10" value="1" required>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="crianca">Criança</label>
+                            <input type="number" id="crianca" name="crianca" min="0" max="5" value="0" required>
+                            <label for="crianca5">Até 5 anos</label>
+                            <input type="number" id="crianca5" name="crianca5" min="0" max="5" value="0" required>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <input type="checkbox" id="estacionamento" name="estacionamento" value="sim">
+                            <label for="estacionamento">Quero reservar uma vaga no estacionamento.</label>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <label for="forma_pagamento">Forma de pagamento</label>
+                                <select name="forma_pagamento" id="forma_pagamento">
+                                    <option value="tranferencia">Transferência (TED/DOC)</option>
+                                    <option value="pix">PIX</option>
+                                    <option value="deposito">Depósito</option>
+                                    <optgroup label="Cartão de crédito">
+                                        <option value="master">Master</option>
+                                        <option value="visa">Visa</option>
+                                        <option value="elo">Elo</option>
+                                    </optgroup>
+                                </select>
+                        </p>
+                    </div>
+
+                    <div>
+                            <label for="pedido">Se desejar, faça um pedido especial, faremos o possível para atendê-lo:</label>
+                            <br>
+                            <textarea name="pedido" id="pedido"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="button">Solicitar Reserva</button>
+                    </div>
+                
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <h5>Desenvolvido por Tech Hotelaria</h5>
+    </footer>
+
+</body>
+</html>
