@@ -1,6 +1,6 @@
 * {
   font-family: "Courier New", Courier, monospace;
-  color: #fff;
+  color: 245, 245, 220;
   margin: 0px;
   padding: 0px;
 }
@@ -26,9 +26,9 @@ body {
   /* O gradiente roxo, com sua opacidade inicial controlada */
   background: radial-gradient(
     circle,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(71, 29, 138, 0.2) 35%,
-    rgba(71, 29, 138, 0.7) 100%
+    rgba(248, 249, 250) 0%,
+    rgba(26, 199, 210, 0.2) 35%,
+    rgba(26, 199, 210, 0.7) 100%
   );
 
   /* Aplica a animação de opacidade */
