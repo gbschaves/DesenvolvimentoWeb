@@ -6,13 +6,15 @@
 }
 
 body {
-  margin: 0;
-  /*height: 100vh;
-  width: 100vw;
-  display: flex;*/
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
 header h1 {
   text-align: center;
     color: #0d4834; /* Cor do link */
@@ -39,6 +41,59 @@ header nav a:hover {
   transition: color 0.9s ease-in-out
 }
 
+main figure {
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin: 0;
+    width: 920px;
+}
+
+.img-index-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;           /* Espaçamento entre as imagens */
+  flex-wrap: wrap;     /* Permite quebrar linha em telas pequenas */
+  width: 100%;
+  margin: 30px 0;
+}
+
+.img-index-container img {
+  max-width: 250px;    /* Limita a largura máxima de cada imagem */
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  background: #fff;
+  padding: 10px;
+}
+
+.img-index-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+main article p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 20px;
+  text-align: center;
+}
+
+.form-cadastro {
+  max-width: 800px;
+  margin: 32px auto;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .gradient-overlay {
   /* Este é o elemento que conterá o gradiente e será animado */
   width: 100%;
@@ -51,9 +106,9 @@ header nav a:hover {
   /* O gradiente roxo, com sua opacidade inicial controlada */
   background: radial-gradient(
     circle,
-    rgba(248, 249, 250) 0%,
-    rgba(26, 199, 210, 0.2) 35%,
-    rgba(26, 199, 210, 0.7) 100%
+    #f7d6e0 30%, 
+    #b2f7ef 70%,
+    #7bdff2 100%
   );
 
   /* Aplica a animação de opacidade */
@@ -78,9 +133,9 @@ header nav a:hover {
 }
 
 footer {
-  position: absolute;
-  bottom: 0%;
   width: 100%;
+  background: #0d4834;
+  color: #fff;
 }
 
 @keyframes breathGradient {
