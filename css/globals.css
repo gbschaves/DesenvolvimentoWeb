@@ -32,8 +32,9 @@ header nav {
 header nav a {
   text-decoration: none;
   font-size: 1.8em;
-  color: #0d4834; /* Cor do link */
+  color: #f2b5d4; /* Cor do link */
   font-weight: bold;
+  text-shadow: 2px 2px;
 }
 header nav a:hover {
   color: #1ac7d2; /* Cor do link ao passar o mouse */
@@ -134,9 +135,10 @@ main article p {
 
 footer {
   width: 100%;
-  background: #0d4834;
-  color: #fff;
+  background: transparent;
+  color: black;
 }
+
 
 @keyframes breathGradient {
   0% {
