@@ -82,16 +82,96 @@ main article p {
   text-align: center;
 }
 
+/* Estilo para o formulário de cadastro */
 .form-cadastro {
-  max-width: 800px;
+  width: 900px;
   margin: 32px auto;
-  background: #fff;
+  background: #eff7f6;
   padding: 32px 24px;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+/* Estilo para a tabela de serviços e listas de produtos */
+.container-cadastro {
+  width: 900px;
+  margin: 32px auto;
+  background: #eff7f6;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Estilo para a tabela de serviços */
+table {
+  text-align: center;
+  border-collapse: collapse; /* Remove espaços entre as bordas */
+}
+
+table.table,
+table.table-sm {
+  background: #eff7f6 !important;
+}
+
+table.table th,
+table.table-sm th,
+table.table td,
+table.table-sm td {
+  background: #eff7f6 !important;
+}
+
+table caption {
+  font-size: 0.9em;
+  margin-bottom: 16px;
+}
+
+/* Estilo para os botões com as listas de produtos */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Altera a cor do botão ao passar o mouse por cima*/
+.active, .collapsible:hover {
+  background-color: #eff7f6;
+}
+
+/* Estilos de cada botão*/
+.content-1,
+.content-2,
+.content-3,
+.content-4,
+.content-5 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  
+}
+
+/* Estilo dos itens dentro de cada conteúdo */
+.content-1 ul,
+.content-2 ul,
+.content-2 p,
+.content-3 ul,
+.content-4 ul,
+.content-5 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .gradient-overlay {
