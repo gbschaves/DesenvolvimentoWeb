@@ -1,8 +1,14 @@
+
 * {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Alata", sans-serif;
   color: 245, 245, 220;
   margin: 0px;
   padding: 0px;
+}
+.alata-regular {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -31,9 +37,12 @@ header nav {
 
 header nav a {
   text-decoration: none;
-  font-size: 1.8em;
-  color: #0d4834; /* Cor do link */
+  font-size: 3em;
+  color: #f2b5d4; /* Cor do link */
   font-weight: bold;
+  -webkit-text-stroke-width: .0em;
+  -webkit-text-stroke-color: #ffffff;
+  text-shadow: .05em .05em #ffffff;
 }
 header nav a:hover {
   color: #1ac7d2; /* Cor do link ao passar o mouse */
@@ -214,9 +223,10 @@ table caption {
 
 footer {
   width: 100%;
-  background: #0d4834;
-  color: #fff;
+  background: transparent;
+  color: black;
 }
+
 
 @keyframes breathGradient {
   0% {
