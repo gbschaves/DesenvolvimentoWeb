@@ -1,53 +1,52 @@
 * {
   font-family: "Alata", sans-serif;
-  color: 245, 245, 220;
-  margin: 0px;
-  padding: 0px;
-}
-.alata-regular {
-  font-family: "Alata", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  color: rgb(31, 31, 31);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #f8f9fa;
 }
 
 main {
   flex: 1 0 auto;
+  padding: 16px;
 }
 
+/* HEADER */
 header h1 {
   text-align: center;
-    color: #0d4834; /* Cor do link */
-  font-size: 3em;
+  color: #0d4834;
+  font-size: clamp(1.8em, 5vw, 3em);
   font-weight: bold;
-  margin: 20px;
+  margin: 20px 10px;
 }
 
-/* Estilo do container do menu */
+/* NAVIGATION */
 header nav,
 .custom-nav {
   display: flex;
   justify-content: center;
-  gap: 48px;
+  gap: 23px;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 20px 10px;
+  padding: 0 10px;
 }
 
-/* Estilo dos links do menu */
 header nav a,
 .nav-links a {
   text-decoration: none;
-  font-size: 3em;
+  font-size: clamp(1.2em, 5vw, 2em);
   color: #f2b5d4;
   font-weight: bold;
-  -webkit-text-stroke-width: .0em;
+  -webkit-text-stroke-width: 0;
   -webkit-text-stroke-color: #ffffff;
-  text-shadow: .05em .05em #ffffff;
+  text-shadow: 0.05em 0.05em #ffffff;
   transition: color 0.9s ease-in-out;
 }
 
@@ -57,11 +56,7 @@ header nav a:hover,
   text-decoration: underline;
 }
 
-/* Estilo para a barra de navegação responsiva */
-
-.custom-nav {
-  position: relative;
-}
+/* NAV TOGGLE BUTTON */
 .menu-toggle {
   display: none;
   background: none;
@@ -72,14 +67,17 @@ header nav a:hover,
   right: 0;
   top: 0;
 }
+
 .nav-links {
   display: flex;
-  gap: 30px; /* Ou o valor desejado */
+  gap: 30px;
 }
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -89,39 +87,41 @@ header nav a:hover,
     right: 0;
     width: 200px;
     border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     padding: 12px;
-    gap: 16px; /* Espaçamento menor no mobile */
+    gap: 16px;
   }
+
   .nav-links.active {
     display: flex;
   }
 }
 
+/* FIGURE/IMAGE CONTAINERS */
 main figure {
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-    margin: 0;
-    width: 920px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
 }
 
 .img-index-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;           /* Espaçamento entre as imagens */
-  flex-wrap: wrap;     /* Permite quebrar linha em telas pequenas */
+  gap: 24px;
+  flex-wrap: wrap;
   width: 100%;
   margin: 30px 0;
 }
 
 .img-index-container img {
-  max-width: 250px;    /* Limita a largura máxima de cada imagem */
+  max-width: 250px;
   width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
   background: #fff;
   padding: 10px;
@@ -129,31 +129,19 @@ main figure {
 
 .img-index-container img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* TEXT INSIDE ARTICLE */
 main article p {
-  font-size: 1.2em;
+  font-size: clamp(1em, 2.5vw, 1.2em);
   line-height: 1.6;
   margin: 20px;
   text-align: center;
 }
 
-/* Estilo para o formulário de cadastro */
-.form-cadastro {
-  max-width: 900px;
-  width: 100%;
-  margin: 32px auto;
-  background: #eff7f6;
-  padding: 32px 24px;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-/* Estilo para a tabela de serviços e listas de produtos */
+/* FORM + CONTAINERS */
+.form-cadastro,
 .container-cadastro {
   max-width: 900px;
   width: 100%;
@@ -161,40 +149,35 @@ main article p {
   background: #eff7f6;
   padding: 32px 24px;
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 @media (max-width: 600px) {
+  .form-cadastro,
   .container-cadastro {
-    padding: 16px 4px;
+    padding: 16px 12px;
   }
+
   header nav,
   .custom-nav .nav-links {
-    gap: 16px; /* Espaçamento menor para caber na tela */
     flex-direction: column;
     align-items: center;
+    gap: 16px;
+  }
+
+  .img-index-container {
+    gap: 12px;
   }
 }
 
-/* Estilo para a tabela de serviços */
+/* TABLE STYLES */
 table {
+  width: 100%;
   text-align: center;
-  border-collapse: collapse; /* Remove espaços entre as bordas */
-}
-
-table.table,
-table.table-sm {
-  background: #eff7f6 !important;
-}
-
-table.table th,
-table.table-sm th,
-table.table td,
-table.table-sm td {
-  background: #eff7f6 !important;
+  border-collapse: collapse;
 }
 
 table caption {
@@ -202,7 +185,15 @@ table caption {
   margin-bottom: 16px;
 }
 
-/* Estilo para os botões com as listas de produtos */
+table th,
+table td {
+  padding: 12px 8px;
+  background: #eff7f6 !important;
+  word-break: break-word;
+  font-size: clamp(0.8em, 2.5vw, 1em);
+}
+
+/* COLLAPSIBLE SECTIONS */
 .collapsible {
   background-color: #eee;
   color: #444;
@@ -211,17 +202,15 @@ table caption {
   width: 100%;
   border: none;
   text-align: left;
-  outline: none;
   font-size: 15px;
   font-weight: bold;
 }
 
-/* Altera a cor do botão ao passar o mouse por cima*/
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: #eff7f6;
 }
 
-/* Estilos de cada botão*/
 .content-1,
 .content-2,
 .content-3,
@@ -230,79 +219,67 @@ table caption {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  
 }
 
-/* Estilo dos itens dentro de cada conteúdo */
 .content-1 ul,
 .content-2 ul,
 .content-2 p,
 .content-3 ul,
 .content-4 ul,
 .content-5 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* GRADIENT BACKGROUND */
 .gradient-overlay {
-  /* Este é o elemento que conterá o gradiente e será animado */
   width: 100%;
   height: 100%;
-  position: fixed; /* Posiciona sobre o fundo preto */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: -1; /* Garante que fique atrás de outros conteúdos */
-
-  /* O gradiente roxo, com sua opacidade inicial controlada */
-  background: radial-gradient(
-    circle,
-    #f7d6e0 30%, 
-    #b2f7ef 70%,
-    #7bdff2 100%
-  );
-
-  /* Aplica a animação de opacidade */
+  z-index: -1;
+  background: radial-gradient(circle, #f7d6e0 30%, #b2f7ef 70%, #7bdff2 100%);
   animation: breathGradient 5s infinite alternate ease-in-out;
 }
 
+/* FLOATING TEXT */
 .paraonboard {
   position: absolute;
   top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%) scale(1); /* Adiciona um scale inicial de 1 */
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   text-align: center;
-  opacity: 0.1; /* Opacidade inicial do texto */
-
-  /* Adiciona a transição para suavizar a animação */
+  opacity: 0.1;
   transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
+  font-size: clamp(1em, 5vw, 2em);
+  padding: 0 10px;
 }
 
 .paraonboard:hover {
-  transform: translate(-50%, -50%) scale(2.1); /* Aumenta o tamanho em 10% ao passar o mouse */
-  opacity: 1; /* Torna o texto totalmente visível ao passar o mouse */
+  transform: translate(-50%, -50%) scale(2.1);
+  opacity: 1;
 }
 
+/* FOOTER */
 footer {
   width: 100%;
   background: transparent;
   color: black;
+  text-align: center;
+  padding: 16px;
 }
 
-
-
+/* GRADIENT ANIMATION */
 @keyframes breathGradient {
   0% {
-    /* O roxo quase não aparece (muito transparente) */
-    opacity: 0.1; /* Ajuste este valor para controlar a intensidade mínima do roxo */
+    opacity: 0.1;
   }
   50% {
-    /* O roxo aparece no seu pico (mais visível) */
-    opacity: 1; /* Ajuste este valor para controlar a intensidade máxima do roxo */
+    opacity: 1;
   }
   100% {
-    /* O roxo volta a quase não aparecer */
     opacity: 0.1;
   }
 }
-
